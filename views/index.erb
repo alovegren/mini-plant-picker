@@ -1,3 +1,30 @@
 <div id="welcome">
   <p>Welcome to the Mini Plant Picker!</p>
 </div>
+
+<div id="plant_picker_form">
+  <fieldset>
+    <legend>Select your conditions</legend>
+
+    <form id="plant_options_form" method="post" action="/plants">
+      <label for="sunlight_amount">Amount of sunlight</label>
+      <select id="sunlight_amount" name="sunlight_amount" required>
+        <option value="sun">Sun</option>
+        <option value="part_sun">Part sun</option>
+        <option value="part_shade">Part shade</option>
+        <option value="shade">Shade</option>
+      </select>
+
+      <br/><br/>
+      <label for="moisture_level">Level of moisture</label>
+      <select id="moisture_level" name="moisture_level" required>
+        <option value="dry">Dry</option>
+        <option value="medium">Medium</option>
+        <option value="wet">Wet</option>
+      </select>
+
+      <br/><br/>
+      <input type="submit" value="Find plants"/>
+    </form>
+  </fieldset>
+</div>

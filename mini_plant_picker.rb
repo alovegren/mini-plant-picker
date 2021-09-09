@@ -12,3 +12,15 @@ end
 get "/" do
   erb :index
 end
+
+post "/plants" do
+  session[:sunlight_amount] = params[:sunlight_amount]
+
+  session[:moisture_level] = params[:moisture_level]
+
+  redirect "/plants"
+end
+
+get "/plants" do
+  "You selected #{session[:sunlight_amount]} and #{session[:moisture_level]}"
+end
